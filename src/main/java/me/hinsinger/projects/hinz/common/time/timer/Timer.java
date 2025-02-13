@@ -1,4 +1,4 @@
-package me.hinsinger.projects.hinz.time.timer;
+package me.hinsinger.projects.hinz.common.time.timer;
 
 import java.util.concurrent.TimeUnit;
 
