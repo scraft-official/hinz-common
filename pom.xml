@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>me.hinsinger.projects</groupId>
+  <artifactId>hinz-common</artifactId>
+  <version>0.0.1</version>
+  
+  <dependencies>
+		<!-- Fast UUID parsing - https://github.com/jchambers/fast-uuid -->
+		<dependency>
+			<groupId>com.eatthepath</groupId>
+			<artifactId>fast-uuid</artifactId>
+			<version>0.2.0</version>
+		</dependency>
+		
+		<!-- Spring Framework-->
+		<dependency>
+		    <groupId>org.springframework</groupId> 
+		    <artifactId>spring-core</artifactId>
+		    <version>6.1.9</version>
+		</dependency>
+
+		<!-- Jakcson - JSON Parsing -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.17.1</version>
+		</dependency>
+
+		<!-- GSON - Json Parsing -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
+		<!-- Junit - Testing -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>5.10.3</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.34</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
