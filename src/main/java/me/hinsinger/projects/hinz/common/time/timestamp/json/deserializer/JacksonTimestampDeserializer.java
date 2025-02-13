@@ -1,4 +1,4 @@
-package me.hinsinger.projects.hinz.time.timestamp.json.deserializer;
+package me.hinsinger.projects.hinz.common.time.timestamp.json.deserializer;
 
 import java.io.IOException;
 
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 
-import me.hinsinger.projects.hinz.time.timestamp.Timestamp;
+import me.hinsinger.projects.hinz.common.time.timestamp.Timestamp;
 
 public class JacksonTimestampDeserializer extends JsonDeserializer<Timestamp> {
 

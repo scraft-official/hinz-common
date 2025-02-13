@@ -1,14 +1,14 @@
-package me.hinsinger.projects.hinz.time.timestamp;
+package me.hinsinger.projects.hinz.common.time.timestamp;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import me.hinsinger.projects.hinz.common.json.JsonUtil;
-import me.hinsinger.projects.hinz.time.timestamp.json.deserializer.GsonTimestampDeserializer;
-import me.hinsinger.projects.hinz.time.timestamp.json.deserializer.JacksonTimestampDeserializer;
-import me.hinsinger.projects.hinz.time.timestamp.json.serializer.GsonTimestampSerializer;
-import me.hinsinger.projects.hinz.time.timestamp.json.serializer.JacksonTimestampSerializer;
+import me.hinsinger.projects.hinz.common.time.timestamp.json.deserializer.GsonTimestampDeserializer;
+import me.hinsinger.projects.hinz.common.time.timestamp.json.deserializer.JacksonTimestampDeserializer;
+import me.hinsinger.projects.hinz.common.time.timestamp.json.serializer.GsonTimestampSerializer;
+import me.hinsinger.projects.hinz.common.time.timestamp.json.serializer.JacksonTimestampSerializer;
 
 public class Timestamp {
 	static {

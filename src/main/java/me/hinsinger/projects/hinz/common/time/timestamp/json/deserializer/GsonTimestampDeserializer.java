@@ -1,4 +1,4 @@
-package me.hinsinger.projects.hinz.time.timestamp.json.deserializer;
+package me.hinsinger.projects.hinz.common.time.timestamp.json.deserializer;
 
 import java.lang.reflect.Type;
 
@@ -7,7 +7,7 @@ import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 
-import me.hinsinger.projects.hinz.time.timestamp.Timestamp;
+import me.hinsinger.projects.hinz.common.time.timestamp.Timestamp;
 
 public class GsonTimestampDeserializer implements JsonDeserializer<Timestamp> {
 
