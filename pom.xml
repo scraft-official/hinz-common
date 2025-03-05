@@ -4,6 +4,13 @@
   <artifactId>hinz-common</artifactId>
   <version>0.0.1</version>
   
+  <repositories>
+  	<repository>
+  		<id>hinsinger-repo</id>
+  		<url>https://nexus.hinsinger.me/repository/hinz-libraries/</url>
+  	</repository>
+  </repositories>
+  
   <dependencies>
 		<!-- Fast UUID parsing - https://github.com/jchambers/fast-uuid -->
 		<dependency>
@@ -48,7 +55,12 @@
 			<version>1.18.34</version>
 			<scope>provided</scope>
 		</dependency>
-		
-		
 	</dependencies>
+	
+	<distributionManagement>
+	    <repository>
+	        <id>hinsinger-nexus</id>
+	        <url>https://nexus.hinsinger.me/repository/hinz-libraries/</url>
+	    </repository>
+	</distributionManagement>
 </project>
