@@ -14,8 +14,16 @@ public class TetraMultiKeyMap<K1, K2, K3, K4, V> extends MultiKeyMap<V> {
         super.put(new MultiKey(a, b, c, d), value);
     }
 
-    public Optional<V> getValue(K1 a, K2 b, K3 c, K4 d) {
-        return super.getValue(new MultiKey(a, b, c, d));
+    public V get(K1 a, K2 b, K3 c, K4 d) {
+        return super.getValue(new MultiKey(a, b, c, d)).orElseGet(() -> null);
+    }
+    
+    public Optional<V> getOptional(K1 a, K2 b, K3 c, K4 d) {
+    	return super.getValue(new MultiKey(a, b, c, d));
+    }
+    
+    public boolean contains(K1 a, K2 b, K3 c, K4 d) {
+    	return getOptional(a, b, c, d).isPresent();
     }
 
     // 16 getValues overloads with wildcard permutations

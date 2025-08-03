@@ -14,8 +14,16 @@ public class TriMultiKeyMap<K1, K2, K3, V> extends MultiKeyMap<V> {
         super.put(new MultiKey(a, b, c), value);
     }
 
-    public Optional<V> getValue(K1 a, K2 b, K3 c) {
+    public V get(K1 a, K2 b, K3 c) {
+        return super.getValue(new MultiKey(a, b, c)).orElseGet(() -> null);
+    }
+    
+    public Optional<V> getOptional(K1 a, K2 b, K3 c) {
         return super.getValue(new MultiKey(a, b, c));
+    }
+    
+    public boolean contains(K1 a, K2 b, K3 c) {
+    	return getOptional(a, b, c).isPresent();
     }
 
     // 8 combinations of wildcards

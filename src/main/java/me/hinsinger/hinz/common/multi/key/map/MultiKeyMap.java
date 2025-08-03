@@ -97,7 +97,7 @@ public class MultiKeyMap<V> {
         return result;
     }
 
-    protected void clear() {
+    public void clear() {
         root.children.clear();
         root.value = null;
     }

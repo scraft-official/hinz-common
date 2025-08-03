@@ -14,10 +14,18 @@ public class BiMultiKeyMap<K1, K2, V> extends MultiKeyMap<V> {
         super.put(new MultiKey(a, b), value);
     }
 
-    public Optional<V> getValue(K1 a, K2 b) {
+    public Optional<V> getOptional(K1 a, K2 b) {
         return super.getValue(new MultiKey(a, b));
     }
+    
+    public V get(K1 a, K2 b) {
+        return super.getValue(new MultiKey(a, b)).orElseGet(() -> null);
+    }
 
+    public boolean contains(K1 a, K2 b) {
+    	return getOptional(a, b).isPresent();
+    }
+    
     public Collection<V> getValues(K1 a, K2 b) {
         return super.getValues(new MultiKey(a, b));
     }
