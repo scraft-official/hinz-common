@@ -14,8 +14,11 @@ import me.hinsinger.hinz.common.json.JsonUtil;
 import me.hinsinger.hinz.common.random.RandomUtil;
 
 public class HUID {
-	private static final String UUID_REGEX = "[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}";
-    private static final String TRIMMED_UUID_REGEX = "[a-f0-9]{12}4[a-f0-9]{3}[89aAbB][a-f0-9]{15}";
+	private static final String UUID_REGEX = "([a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12})" +
+		    "|(00000000-0000-0000-0000-000000000000)";
+		private static final String TRIMMED_UUID_REGEX = "([a-f0-9]{12}4[a-f0-9]{3}[89aAbB][a-f0-9]{15})" +
+		    "|(00000000000000000000000000000000)";
+
     private static final String ADD_UUID_HYPHENS_REGEX = "([a-f0-9]{8})([a-f0-9]{4})(4[a-f0-9]{3})([89aAbB][a-f0-9]{3})([a-f0-9]{12})";
 	
     private UUID uuid;
@@ -30,7 +33,7 @@ public class HUID {
     }
     
     public static HUID fromString(@NonNull String huid) {
-    	if(!isHUID(huid)) throw new IllegalArgumentException("Provided muid %s is not an muid identifier!".formatted(huid));
+    	if(!isHUID(huid)) throw new IllegalArgumentException("Provided huid %s is not an huid identifier!".formatted(huid));
     	
     	if(huid.contains("-")) return new HUID(FastUUID.parseUUID(huid));
 

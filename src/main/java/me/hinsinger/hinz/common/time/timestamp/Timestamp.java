@@ -2,6 +2,7 @@ package me.hinsinger.hinz.common.time.timestamp;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.time.Instant;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -36,6 +37,14 @@ public class Timestamp {
 	
 	public static Timestamp yesterday() {
 		return new Timestamp().subDays(1);
+	}
+	
+	public static Timestamp fromInstant(Instant instant) {
+		return new Timestamp(instant.toEpochMilli());
+	}
+	
+	public static Timestamp fromDate(Date date) {
+		return new Timestamp(date.getTime());
 	}
 	
 	private Timestamp() {
@@ -116,6 +125,7 @@ public class Timestamp {
 		return unit.convert((timestamp.epoch - this.epoch), TimeUnit.MILLISECONDS);
 	}
 	
+	
 	public Timestamp copy() {
 		return new Timestamp(epoch);
 	}
@@ -133,6 +143,10 @@ public class Timestamp {
 	
 	public long toUnixMillis() {
 		return this.epoch;
+	}
+	
+	public Instant toInstant() {
+		return Instant.ofEpochMilli(this.epoch);
 	}
 	
 	public Date toDate() {
