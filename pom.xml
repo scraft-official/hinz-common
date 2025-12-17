@@ -65,7 +65,7 @@
 	<distributionManagement>
 	    <repository>
 	        <id>hinsinger-nexus</id>
-	        <url>https://nexus.hinsinger.me/repository/hinz-libraries/</url>
+	        <url>http://nexus.hinsinger.me/repository/maven-releases/</url>
 	    </repository>
 	</distributionManagement>
 </project>
